@@ -1,6 +1,12 @@
 html,body{
     height:100%
   }
+  body {  
+    /* background-color:linear-gradient();     */
+    margin: 0;  
+    overflow: hidden;  
+    background-repeat: no-repeat;  
+   }  
   
   .bg_heart {
       position: relative;
