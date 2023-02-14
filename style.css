@@ -9,7 +9,7 @@ html,body{
   body {  
     /* background-color:linear-gradient();     */
     margin: 0;  
-    /* overflow: hidden;   */
+    overflow: hidden;
     background-repeat: no-repeat;  
     align-items: center;
     justify-content: center;
