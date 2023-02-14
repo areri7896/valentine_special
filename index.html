@@ -11,9 +11,48 @@
 
 </head>
 <body>
+    <h1 class="Hap_v">Happy Valentines day!</h1>
+    <figcaption class="fig">A beautiful heart is always a lovely way to express your feeling</figcaption>
+    <button onclick="generateLoveQuote()"> Generate Love Quote </button> 
+    <p id="love-message"></p>
+
     <div class="bg_heart"></div>
     <div class="heart"></div>
     <script>
+    const loveQuotes = [
+  "Love is not about how much you say ‘I love you’, but how much you can prove that it’s true.",
+  "I love you not only for what you are, but for what I am when I am with you.",
+  "I wish I could turn back the clock. I’d find you sooner and love you longer.",
+  "You had me at ‘hello’.",
+  "I am forever grateful for the happiness and joy you have brought into my life.",
+  "I never want to stop making memories with you.",
+  "I am in love with your smile, your voice, your body, your laugh, your eyes. But most of all, I am in love with you.",
+  "You are my forever Valentine, my love.",
+];
+
+function generateLoveQuote() {
+  const randomIndex = Math.floor(Math.random() * loveQuotes.length);
+  const quote = loveQuotes[randomIndex];
+  const caption = document.querySelector('figcaption');
+  caption.textContent = quote;
+}
+
+const button = document.querySelector('button');
+button.addEventListener('click', generateLoveQuote);
+
+function generateLoveMessage() {
+        const messages = [
+          "You are the sunshine in my life",
+          "I am so lucky to have you",
+          "I love you more and more every day",
+          "You make me feel complete",
+          "You are my soulmate",
+        ];
+        const randomIndex = Math.floor(Math.random() * messages.length);
+        const message = messages[randomIndex];
+        document.getElementById("love-message").innerHTML = message;
+      }
+
     
     var love = setInterval(function() {
         var r_num = Math.floor(Math.random() * 40) + 1;
@@ -33,6 +72,7 @@
                 $(this).detach();
             }
         });
-    }, 500);</script>
+    }, 500);
+    </script>
 </body>
 </html>
